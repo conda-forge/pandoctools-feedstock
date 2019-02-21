@@ -1,5 +1,5 @@
 {% set name = "pandoctools" %}
-{% set version = "1.4.8" %}
+{% set version = "2.6.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 86dc08c59804d94407d41f9d9033763507cbf5a238249cb1b9f6059e3a3219a1
+  sha256: 5228b2137ac009d0e9912b488d975d29b3fa01fb5751e51d596bd5cd6ca19403
 
 build:
   noarch: python
