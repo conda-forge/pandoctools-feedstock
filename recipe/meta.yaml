@@ -17,6 +17,7 @@ build:
     - pandoctools = pandoctools.cli.cli:pandoctools
     - pandoctools-resolve = pandoctools.pandoctools_resolve.resolve:cli
     - pandoctools-ready = pandoctools.ready.ready:ready
+    - regex-replace = pandoctools.regex_replace.cli:cli
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -32,16 +33,18 @@ requirements:
     - notebook
     - jupyter
     - numpy
-    - panflute >=1.11.2
+    - panflute >=1.12.4
     - knitty >=0.5.0
-    - pyppdf >=0.0.10
+    - pyppdf >=0.0.11
     - sugartex >=0.1.16
     - shortcutter >=0.1.19
-    - py-pandoc-crossref >=0.3.4.0.3
-    - py-pandoc >=2.6
+    - py-pandoc-crossref >=0.3.5.0.1
+    - py-pandoc >=2.8.0.1
     - libsass
-    - py-mathjax
+    - py-mathjax <3.0
     - shutilwhich-cwdpatch >=0.1.0
+    - jupyter_console >=6.0.0
+    - py-open-fonts >=0.4.9
 
 test:
   imports:
@@ -51,10 +54,12 @@ test:
     - pandoctools.pandoctools_resolve
     - pandoctools.cli
     - pandoctools.cat_md
+    - pandoctools.regex_replace
   commands:
     - pandoctools --help
     - pandoctools-ready
     - pandoctools-resolve Default
+    - regex-replace --help
     - |
       echo hello | cat-md - -
 
