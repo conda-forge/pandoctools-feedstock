@@ -1,5 +1,5 @@
 {% set name = "pandoctools" %}
-{% set version = "2.8.0.3" %}
+{% set version = "2.8.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 96e0cece0045a520823d368f6eb2f8b21ff649d56b0228c2da0c339437188212
+  sha256: 48053fd4d3d43a9d7b1ef3f467cfc8e639bab28fa502a5a816e66378fb406689
 
 build:
   noarch: python
@@ -65,8 +65,8 @@ test:
 
 about:
   home: https://github.com/kiwi0fruit/pandoctools
-  license: GPL2+
-  license_family: GPL2
+  license: MIT
+  license_family: MIT
   license_file: LICENSE
   summary: "Profile manager of text processing pipelines: Pandoc filters, any text CLI filters. Atom+Markdown+Pandoc+Jupyter workflow, export to ipynb"
   doc_url: https://github.com/kiwi0fruit/pandoctools
