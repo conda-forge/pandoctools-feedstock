@@ -1,5 +1,5 @@
 {% set name = "pandoctools" %}
-{% set version = "2.8.0.4" %}
+{% set version = "2.8.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 48053fd4d3d43a9d7b1ef3f467cfc8e639bab28fa502a5a816e66378fb406689
+  sha256: 1a1791c0725e31e1f2633cac6f0dd0e4c31ffe142450b16d3d81c3798a696b38
 
 build:
   noarch: python
@@ -34,8 +34,8 @@ requirements:
     - jupyter
     - numpy
     - panflute >=1.12.4
-    - knitty >=0.5.0
-    - pyppdf >=0.0.11
+    - knitty >=0.6.1
+    - pyppdf >=0.1.1
     - sugartex >=0.1.16
     - shortcutter >=0.1.19
     - py-pandoc-crossref >=0.3.5.0.1
@@ -44,7 +44,7 @@ requirements:
     - py-mathjax <3.0
     - shutilwhich-cwdpatch >=0.1.0
     - jupyter_console >=6.0.0
-    - py-open-fonts >=0.4.9
+    - py-open-fonts >=0.7.0
 
 test:
   imports:
