@@ -5,11 +5,13 @@ Home: https://github.com/kiwi0fruit/pandoctools
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pandoctools-feedstock/blob/master/LICENSE.txt)
 
 Summary: Profile manager of text processing pipelines: Pandoc filters, any text CLI filters. Atom+Markdown+Pandoc+Jupyter workflow, export to ipynb
 
+Development: https://github.com/kiwi0fruit/pandoctools
 
+Documentation: https://github.com/kiwi0fruit/pandoctools
 
 Current build status
 ====================
