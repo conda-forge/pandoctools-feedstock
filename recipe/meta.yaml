@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 1a1791c0725e31e1f2633cac6f0dd0e4c31ffe142450b16d3d81c3798a696b38
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - cat-md = pandoctools.cat_md.cat_md:cli
     - pandoctools = pandoctools.cli.cli:pandoctools
@@ -22,10 +22,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - pip >=10.0.1
     - setuptools
     - click
@@ -47,6 +47,8 @@ requirements:
     - py-open-fonts >=0.7.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pandoctools
     - pandoctools.ready
